@@ -1,0 +1,11 @@
+:root {
+    --fondo1: #20201eff;
+    --fondo2: #20201E;
+    --texto1: #3F3F3B;
+    --text2: #EBEBEB;
+    --principal: #F0D16A;
+}
+
+body {
+    margin: 0;
+}
