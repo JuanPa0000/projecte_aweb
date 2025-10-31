@@ -5,7 +5,7 @@
     <link href="styles.css" rel="stylesheet">
     <title>Luxury Watches</title>
 </head>
-<body>
+<body> 
     <header id="header">
         <input class="header-input">
         <nav class="header-navMenu">
@@ -39,7 +39,7 @@
                 <div class="product-infoContainer">
                     <div class="product-infoContainer-info">
                         <h2 class="product-infoContainer-title">Rolex Daytona Oro</h2>
-                        <p class="product-infoContainer-price">$47.900</p>
+                        <p class="product-infoContainer-price">$47900</p>
                     </div>
                     <button class="infoButton"><i class="fa-solid fa-circle-info"></i></button>
                 </div>
@@ -55,7 +55,7 @@
                 <div class="product-infoContainer">
                     <div class="product-infoContainer-info">
                         <h2 class="product-infoContainer-title">Rolex Daytona Panda</h2>
-                        <p class="product-infoContainer-price">$56.200</p>
+                        <p class="product-infoContainer-price">$56200</p>
                     </div>
                     <button class="infoButton"><i class="fa-solid fa-circle-info"></i></button>
                 </div>
@@ -71,7 +71,7 @@
                 <div class="product-infoContainer">
                     <div class="product-infoContainer-info">
                         <h2 class="product-infoContainer-title">Rolex Daytona Oro Rosa</h2>
-                        <p class="product-infoContainer-price">$45.000</p>
+                        <p class="product-infoContainer-price">$45000</p>
                     </div>
                     <button class="infoButton"><i class="fa-solid fa-circle-info"></i></button>
                 </div>
@@ -87,7 +87,7 @@
                 <div class="product-infoContainer">
                     <div class="product-infoContainer-info">
                         <h2 class="product-infoContainer-title">Rolex Daytona Marino</h2>
-                        <p class="product-infoContainer-price">$50.100</p>
+                        <p class="product-infoContainer-price">$50100</p>
                     </div>
                     <button class="infoButton"><i class="fa-solid fa-circle-info"></i></button>
                 </div>
@@ -100,13 +100,32 @@
         </section>
     </main>
 
-    <div class="productDetailsBackground"><div class="productDetails">   
+    <div class="productDetailsBackground"><div class="productDetails">
+        <button class="productDetails-closeButton"><i class="fa-solid fa-xmark"></i></button>   
         <img class="productDetails-img" src="assets/daydate_azul.jpg">
         <div class="productDetails-infoContainer">
             <h1 class="productDetails-title"></h1>
             <p class="productDetails-description"></p>
         </div>
     </div></div>
+
+    <div class="cartSection">
+        <div>
+        <div class="cartSection-titleBox">
+            <button class="closeCartButton"><i class="fa-solid fa-angle-right"></i></button>
+            <h1 class="cartSection-titleBox-title">Carrito</h1>
+            <div></div>
+        </div>
+
+        <div class="cartSection-productsBox"></div>
+        </div>
+        <hr>
+        <div class="cartSection-buyBox">
+            <h1 class="cartSection-buyBox-totalPrice"></h1>
+            <button class="cartSection-buyBox-buyButton">COMPRAR AHORA</button>
+        </div>
+    </div>
+
     <script src="index.js"></script>
 </body>
 </html>

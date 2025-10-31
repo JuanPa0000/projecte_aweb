@@ -1,9 +1,10 @@
 const body = document.querySelector("body");
 
+//PRODUCT DETAILS CARD
 const productDetailsCard = document.querySelector(".productDetails");
 const infoButtonList = document.getElementsByClassName("infoButton");
 
-for(let i=0; i<infoButtonList.length; i++) {
+for(let i=0; i<infoButtonList.length; i++) { // Activar el product details card
     infoButtonList[i].addEventListener("click", () => {
 
         body.style.overflow = "hidden";
@@ -21,3 +22,60 @@ for(let i=0; i<infoButtonList.length; i++) {
         document.querySelector(".productDetails-description").innerText = description.textContent;  
     })
 }
+
+const productDetailsCloseButton = document.querySelector(".productDetails-closeButton");
+productDetailsCloseButton.addEventListener("click", () => { // Cerrar el product details card
+    body.style.overflow="scroll";
+    productDetailsCard.style.display="none";
+    document.querySelector(".productDetailsBackground").style.display = "none";
+})
+
+//CART
+//Acutalizar totalPrice
+let totalPrice=0
+function updateTotalPrice(price) {
+    const totalPriceBox = document.querySelector(".cartSection-buyBox-totalPrice");
+    if(price==0) {
+        totalPriceBox.innerText=0;
+    } else {
+        totalPrice+=parseInt(price.textContent.slice(1));
+        totalPriceBox.innerText=totalPrice;
+    }
+}
+
+//Añadir al carrito
+const addToCartButtons = document.querySelectorAll(".product-cartButton");
+for(let i=0; i<addToCartButtons.length; i++) {
+    addToCartButtons[i].addEventListener("click", () => {
+        // Variables de articulos de productos
+        const title = document.getElementsByClassName("product-infoContainer-title")[i];
+        const price = document.getElementsByClassName("product-infoContainer-price")[i];
+        const img = document.getElementsByClassName("product-img")[i];
+        const productBox = document.querySelector(".cartSection-productsBox");
+
+        // Guardar en el carrito
+        productBox.innerHTML+=`            <div class="cartSection-product">
+                <img class="cartSection-product-img" src="${img.attributes.src.value}"></img>
+                <div class="cartSection-productInformation">
+                    <p class="cartSection-product-name">${title.textContent}</p>
+                    <p class="cartSection-product-price">${price.textContent}</p>
+                    <input type="number" value="1" class="cartSection-product-stock">
+                </div>
+            </div>`;
+        
+        updateTotalPrice(price);
+        })
+}
+//Cerrar
+const closeCartButton = document.querySelector(".closeCartButton");
+const cartSection = document.querySelector(".cartSection");
+closeCartButton.addEventListener("click", () => {
+    cartSection.style.translate = '30rem';
+})
+
+updateTotalPrice(0); //Tener 0 por default al abrir el carrito
+
+
+
+
+
