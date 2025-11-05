@@ -43,6 +43,18 @@ function updateTotalPrice(price) {
     }
 }
 
+//Cerrar carrito function
+const closeCartButton = document.querySelector(".closeCartButton");
+const cartSection = document.querySelector(".cartSection");
+closeCartButton.addEventListener("click", () => {
+    cartSection.style.right = '-30rem';
+})
+
+//Abrir carrito function
+function openCart() {
+    cartSection.style.right = '0';
+}
+
 //Añadir al carrito
 const addToCartButtons = document.querySelectorAll(".product-cartButton");
 for(let i=0; i<addToCartButtons.length; i++) {
@@ -54,7 +66,7 @@ for(let i=0; i<addToCartButtons.length; i++) {
         const productBox = document.querySelector(".cartSection-productsBox");
 
         // Guardar en el carrito
-        productBox.innerHTML+=`            <div class="cartSection-product">
+        productBox.innerHTML+=`<div class="cartSection-product">
                 <img class="cartSection-product-img" src="${img.attributes.src.value}"></img>
                 <div class="cartSection-productInformation">
                     <p class="cartSection-product-name">${title.textContent}</p>
@@ -66,14 +78,11 @@ for(let i=0; i<addToCartButtons.length; i++) {
         updateTotalPrice(price);
         })
 }
-//Cerrar
-const closeCartButton = document.querySelector(".closeCartButton");
-const cartSection = document.querySelector(".cartSection");
-closeCartButton.addEventListener("click", () => {
-    cartSection.style.translate = '30rem';
-})
 
 updateTotalPrice(0); //Tener 0 por default al abrir el carrito
+document.querySelector(".header-actionMenu-cartButton").addEventListener("click", () => {
+    openCart(); // Abrir carrito al tocar el icono del header
+})
 
 
 
