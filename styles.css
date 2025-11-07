@@ -6,8 +6,19 @@
     --principal: #F0D16A;
 }
 
+@font-face {
+    font-family: DMSans;
+    src: url('assets/fonts/Bebas_Neue_DM_Sans/DM_Sans/DMSans-VariableFont_opszwght.ttf');
+}
+
+@font-face {
+    font-family: Neue;
+    src: url('assets/fonts/Bebas_Neue_DM_Sans/Bebas_Neue/BebasNeue-Regular.ttf');
+}
+
 body {
     margin: 0;
+    font-family: DMSans;
 }
 
 /*HEADER*/
@@ -15,6 +26,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 2rem;
+}
+.header-input{
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.158);
+    padding: 0.5rem 1rem;
+    width: 15rem;
 }
 .header-navMenu img {
     width: 10rem;
@@ -25,10 +43,45 @@ body {
     align-items: center;
     margin: 0;
     padding: 0;
+    gap: 3rem;
 }
 .header-navMenu ul li a {
     text-decoration: none;
     color: var(--text1);
+    font-size: 17px;
+    transition: 0.3s ease;
+}
+.header-navMenu ul li:not(.header-img-li) a:hover {
+    background-color: var(--principal);
+}
+.header-actionMenu {
+    display: flex;
+    gap: 1rem;
+}
+.header-actionMenu-cartButton {
+    background-color: transparent;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.300);
+    transition: 0.3 ease;
+}
+.header-actionMenu-perfilButton{
+    background-color: transparent;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.300);
+    transition: 0.3 ease;
+}
+.header-actionMenu-perfilButton:hover{
+    color: var(--principal);
+}
+.header-actionMenu-cartButton:hover{
+    color: var(--principal);
+}
+.headerMenuActiveButton {
+    display: none;
 }
 
 /*MAIN*/
@@ -49,6 +102,7 @@ body {
     display: flex;
     gap: 2rem;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .product {
@@ -191,4 +245,20 @@ body {
 }
 .cartSection-buyBox-totalPrice{
     color: var(--text2);
+}
+
+@media (max-width: 1023px) {
+    /*header*/
+    #header {
+        height: 7rem;
+    }
+    .header-navMenu {
+        display: none;
+    }
+    .header-actionMenu {
+        display: none;
+    }
+    .headerMenuActiveButton{
+        display: flex;
+    }
 }
