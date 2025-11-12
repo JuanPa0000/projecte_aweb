@@ -58,26 +58,15 @@ body {
     display: flex;
     gap: 1rem;
 }
-.header-actionMenu-cartButton {
+.header-actionMenu button {
     background-color: transparent;
     border: none;
     font-size: 1.3rem;
     cursor: pointer;
-    color: rgba(0, 0, 0, 0.300);
+    color: var(--text1);
     transition: 0.3 ease;
 }
-.header-actionMenu-perfilButton{
-    background-color: transparent;
-    border: none;
-    font-size: 1.3rem;
-    cursor: pointer;
-    color: rgba(0, 0, 0, 0.300);
-    transition: 0.3 ease;
-}
-.header-actionMenu-perfilButton:hover{
-    color: var(--principal);
-}
-.header-actionMenu-cartButton:hover{
+.header-actionMenu button:hover{
     color: var(--principal);
 }
 .headerMenuActiveButton {
@@ -96,8 +85,23 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    color: var(--principal);
 }
-
+.ads button {
+    color: var(--principal);
+    font: bold;
+    font-size: 1.1rem;
+    background-color: transparent;
+    border-radius: 30px;
+    padding: 1rem 3rem;
+    border: var(--principal) solid 1px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.ads button:hover {
+    background-color: var(--principal);
+    color: var(--text1);
+}
 #productSection {
     display: flex;
     gap: 2rem;
@@ -107,6 +111,7 @@ body {
 
 .product {
     width: 25rem;
+    color: var(--text1);
 }
 .product-img {
     width: 100%;
@@ -120,6 +125,13 @@ body {
     display: flex;
     flex-direction: column;
 }
+.product .infoButton {
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--text1);
+    cursor: pointer;
+}
 .product-infoContainer-title{
     margin: 0;
     width: max-content;
@@ -127,13 +139,28 @@ body {
 }
 .product-infoContainer-price{
     margin: 0;
+    color: var(--text1);
 }
 .product-buttonContainer{
     display: flex;
     flex-direction: column;
     width: 100%;
 }
-
+.product-buttonContainer button {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.027);
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.product-buttonContainer .product-buyButton{
+    border-bottom: solid 1px rgba(0, 0, 0, 0.123);
+}
+.product-buttonContainer button:hover {
+    background-color: var(--principal);
+}
 /*PRODUCT DETAILS ABSOLUTE*/
 .productDetailsBackground {
     position: fixed;
