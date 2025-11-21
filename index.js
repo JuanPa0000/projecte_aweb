@@ -73,11 +73,23 @@ for(let i=0; i<addToCartButtons.length; i++) {
                     <p class="cartSection-product-price">${price.textContent}</p>
                     <input type="number" value="1" class="cartSection-product-stock">
                 </div>
+                <button class="cartSection-deleteProduct-button"><i class="fa-solid fa-xmark"></i></button>
             </div>`;
         
         updateTotalPrice(price);
-        })
-}
+        openCart();
+})}
+
+// Eliminar del carrito
+const productBox = document.querySelector(".cartSection-productsBox");
+
+productBox.addEventListener("click", (e) => {
+    if (e.target.closest(".cartSection-deleteProduct-button")) {
+        const productDiv = e.target.closest(".cartSection-product");
+        productDiv.remove();
+    }
+});
+
 
 updateTotalPrice(0); //Tener 0 por default al abrir el carrito
 document.querySelector(".header-actionMenu-cartButton").addEventListener("click", () => {
@@ -85,4 +97,19 @@ document.querySelector(".header-actionMenu-cartButton").addEventListener("click"
 })
 
 
+//MENU RESPONSIVE HEADER
+
+const headerMenuActiveButton = document.querySelector('.headerMenuActiveButton');
+const headerResponsiveMenu = document.querySelector(".header-responsiveMenu");
+const headerResponsiveMenuCloseButton = document.querySelector(".header-responsiveMenu-closeButton");
+
+//Abrir menu
+headerMenuActiveButton.addEventListener("click", () => {
+    headerResponsiveMenu.style.display = "flex";
+})
+
+//Cerrar Menu
+headerResponsiveMenuCloseButton.addEventListener("click", () => {
+    headerResponsiveMenu.style.display = "none";
+})
 

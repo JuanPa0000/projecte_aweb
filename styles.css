@@ -71,6 +71,46 @@ body {
 }
 .headerMenuActiveButton {
     display: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 1.3rem;
+    transition: ease 0.1s;
+}
+.headerMenuActiveButton:active {
+    transform: scale(0.8);
+}
+.header-responsiveMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--principal);
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    padding-top: 5rem;
+}
+.header-responsiveMenu button:not(.header-responsiveMenu-closeButton) {
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    padding: 1.5rem 0;
+    cursor: pointer;
+    border: solid 1px rgba(0, 0, 0, 0.212);
+}
+.header-responsiveMenu button:hover {
+    background-color: rgba(255, 255, 255, 0.075);
+}
+.header-responsiveMenu-closeButton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 1rem;
 }
 
 /*MAIN*/
@@ -107,6 +147,8 @@ body {
     gap: 2rem;
     justify-content: center;
     flex-wrap: wrap;
+    margin: 1rem;
+    margin-top: 5rem;
 }
 
 .product {
@@ -235,16 +277,28 @@ body {
     flex-direction: column;
 }
 .cartSection-product{
+    position: relative;
     display: flex;
     width: 100%;
     height: fit-content;
+    gap: 1rem;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.068);
 }
 .cartSection-product-img {
     width: 150px;
+    border-radius: 10px;
 }
 .cartSection-productInformation{
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+}
+.cartSection-product-name {
+    font-size: 1.1rem;
+    margin: 0;
+}
+.cartSection-product-price {
+    margin: 0;
 }
 .cartSection-product-stock{
     width: 3rem;
@@ -273,6 +327,40 @@ body {
 .cartSection-buyBox-totalPrice{
     color: var(--text2);
 }
+.closeCartButton {
+    background-color: transparent;
+    border:none;
+    font-size: 1.2rem;
+    transition: ease 0.5s;
+    cursor: pointer;
+}
+.closeCartButton:hover {
+    transform: translateX(5px);
+    display: flex;
+}
+
+.cartSection-deleteProduct-button {
+    border: none;
+    font-size: 1.4rem;
+    color: rgb(255, 180, 180);
+    font: 900;
+    position: absolute;
+    top: 0;
+    right: -7rem;
+    height: 100%;
+    background-color: #ffd6d6bd;
+    width: 6rem;
+    clip-path: polygon(0% 50%,25% 0%,100% 0%,100% 100%, 25% 100%,0% 50%);
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.cartSection-deleteProduct-button:hover {
+    background-color: #ff4444bd;
+}
+.cartSection-product:hover .cartSection-deleteProduct-button{
+    right: 0;
+}
+
 
 @media (max-width: 1023px) {
     /*header*/
