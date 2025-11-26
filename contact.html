@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+    <title>Luxury Watches</title>
+</head>
+<body> 
+    <header id="header">
+        <input class="header-input" placeholder="Buscar">
+        <nav class="header-navMenu">
+            <ul>
+                <li><a href="">Contacto</a></li>
+                <li class="header-img-li">
+                    <a href="index.html"><img src="assets/logo_transparente.png"></a>
+                </li>
+                <li><a href="">Nosotros</a></li>
+            </ul>
+        </nav>
+        <div class="header-actionMenu">
+            <button class="header-actionMenu-cartButton">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+            <button class="header-actionMenu-perfilButton">
+                <i class="fa-solid fa-user"></i>
+            </button>
+        </div>
+
+        <!-- Menu Responsive -->
+        <button class="headerMenuActiveButton"><i class="fa-solid fa-bars"></i></button>
+        <div class="header-responsiveMenu">
+            <button class="header-responsiveMenu-closeButton"><i class="fa-solid fa-xmark"></i></button>
+            <a href="index.html" class="header-responsiveMenu-home">Home</a>
+            <a class="header-responsiveMenu-perfil">Mi Perfil</a>
+            <a class="header-responsiveMenu-cart">Carrito</a>
+            <a class="header-responsiveMenu-nosotros">Nosotros</a>
+            <a class="header-responsiveMenu-Contacto">Contacto</a>
+        </div>
+    </header>
+
+    <main class="contact">
+        <section class="contact-introduction">
+            <div class="contact-introduction-info">
+                <h1>Hablemos de lo que importa</h1>
+                <p>¿Tienes dudas, sugerencias o una idea que quieras compartir? Este es tu espacio. Escríbenos y nuestro equipo te responderá rápido: nos encanta conectar con quienes quieren hacer cosas grandes juntos.</p>
+            </div>
+            <img src="assets/contacto.jpg">
+        </section>
+
+        <section class="contact-container">
+            <article class="contact-container-phone">
+                <i class="fa-solid fa-phone"></i>
+                <h2>Numero de Contacto</h2>
+                <p>Llámanos directamente y habla con nuestro equipo: estamos listos para ayudarte, aclarar tus dudas o guiarte en lo que necesites. Tu llamada es nuestra prioridad.</p>
+                <h5>+34 642685088</h5>
+                <button><a href="https://www.whatsapp.com/?lang=es" target="_blank">Llamar</a></button>
+            </article>
+
+            <article>
+                <i class="fa-solid fa-comment"></i>
+                <h2>Email de Contacto</h2>
+                <p>Escríbenos y recibirás una respuesta rápida de nuestro equipo. Ya sea una consulta, una propuesta o simplemente para saludar, tu mensaje no se queda sin atención.</p>
+                <h5>jfuentes20943@iesjoanramis.org</h5>
+                <button><a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">Enviar</a></button>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Luxury Watches. Todos los derechos reservados.</p>
+        <a href="https://www.aepd.es/politica-de-privacidad-y-aviso-legal">Aviso legal | Política de privacidad</a>
+        <p>Made by <a href="https://github.com/JuanPa0000" target="_blank">JuanPa0000</a></p>
+    </footer>
+
+    <div class="productDetailsBackground"><div class="productDetails">
+        <button class="productDetails-closeButton"><i class="fa-solid fa-xmark"></i></button>   
+        <img class="productDetails-img" src="assets/daydate_azul.jpg">
+        <div class="productDetails-infoContainer">
+            <h1 class="productDetails-title"></h1>
+            <p class="productDetails-description"></p>
+        </div>
+    </div></div>
+
+    <div class="cartSection">
+        <div class="cartSection-titleBox">
+            <button class="closeCartButton"><i class="fa-solid fa-angle-right"></i></button>
+            <h1 class="cartSection-titleBox-title">Carrito</h1>
+            <div></div>
+        </div>
+        <div style="display: flex; flex-direction: column; flex: 1 1 auto; min-height: 0;">
+            <div class="cartSection-productsBox"></div>
+
+            <div class="cartSection-buyBox">
+                <h1 class="cartSection-buyBox-totalPrice"></h1>
+                <button class="cartSection-buyBox-buyButton">COMPRAR AHORA</button>
+            </div>
+        </div>
+    </div>
+
+    <!--
+      __                 _____        ___   ___   ___   ___  
+     | |_   _  __ _ _ __ |  _ \ __ _ / _ \ / _ \ / _ \ / _ \ 
+  _  | | | | |/ _` | '_ \| |_) / _` | | | | | | | | | | | | |
+ | |_| | |_| | (_| | | | |  __/ (_| | |_| | |_| | |_| | |_| |
+  \___/ \__,_|\__,_|_| |_|_|   \__,_|\___/ \___/ \___/ \___/ 
+                                                             
+    -->
+
+    <script src="index.js"></script>
+</body>
+</html>
