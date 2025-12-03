@@ -57,6 +57,7 @@ function openCart() {
     cartSection.style.right = '0';
 }
 
+
 //Añadir al carrito
 const addToCartButtons = document.querySelectorAll(".product-cartButton");
 for(let i=0; i<addToCartButtons.length; i++) {
@@ -112,6 +113,11 @@ headerMenuActiveButton.addEventListener("click", () => {
 
 //Cerrar Menu
 headerResponsiveMenuCloseButton.addEventListener("click", () => {
+    headerResponsiveMenu.style.display = "none";
+})
+
+document.querySelector(".header-responsiveMenu-cart").addEventListener("click", ()=>{
+    openCart();
     headerResponsiveMenu.style.display = "none";
 })
 
