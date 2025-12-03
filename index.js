@@ -32,15 +32,17 @@ productDetailsCloseButton.addEventListener("click", () => { // Cerrar el product
 
 //CART
 //Acutalizar totalPrice
-let totalPrice=0
-function updateTotalPrice(price) {
+function updateTotalPrice() {
+    let price=0;
     const totalPriceBox = document.querySelector(".cartSection-buyBox-totalPrice");
-    if(price==0) {
-        totalPriceBox.innerText=0;
-    } else {
-        totalPrice+=parseInt(price.textContent.slice(1));
-        totalPriceBox.innerText=totalPrice;
-    }
+    const cartPrices = document.querySelectorAll(".cartSection-product-price");
+    
+    cartPrices.forEach(i => {
+        price+=parseInt(i.textContent.slice(1));
+    });
+        
+    totalPriceBox.innerText=`$${price}`;
+    
 }
 
 //Cerrar carrito function
@@ -76,7 +78,7 @@ for(let i=0; i<addToCartButtons.length; i++) {
                 <button class="cartSection-deleteProduct-button"><i class="fa-solid fa-xmark"></i></button>
             </div>`;
         
-        updateTotalPrice(price);
+        updateTotalPrice();
         openCart();
 })}
 
@@ -87,6 +89,7 @@ productBox.addEventListener("click", (e) => {
     if (e.target.closest(".cartSection-deleteProduct-button")) {
         const productDiv = e.target.closest(".cartSection-product");
         productDiv.remove();
+        updateTotalPrice();
     }
 });
 
