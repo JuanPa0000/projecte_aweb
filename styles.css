@@ -20,6 +20,9 @@ body {
     margin: 0;
     font-family: DMSans;
 }
+h1 {
+    font-family: Neue;
+}
 
 /*HEADER*/
 #header {
@@ -27,6 +30,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
+    background-color: white;
 }
 .header-input{
     border-radius: 20px;
@@ -368,9 +372,10 @@ footer {
     flex-direction: column;
     justify-content: center;
     padding: 8rem 2rem 2rem;
-    margin-top: 8rem;
+    padding: 8rem;
     border-top: solid 2px rgba(0, 0, 0, 0.116);
-}n
+    background-color: white;
+}
 footer a{
     color: var(--fondo2);
 }
@@ -429,6 +434,104 @@ footer a{
     text-decoration: none;
     color: var(--text1)
 }
+
+/* NOSOTROS */
+.nosotros {
+    display: flex;
+    flex-direction: column;
+}
+.nosotros-imgDiv {
+    height: 100vh;
+    color: var(--text2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+}
+.nosotros-imgDiv img {
+    z-index: -2;
+    position: fixed;
+    top: -10rem;
+}
+.nosotros-historia{
+    background-color: var(--fondo1);
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    padding: 5rem 1rem;
+}
+.nosotros-historia-info {
+    color: var(--text2);
+    max-width: 40rem;
+}
+.nosotros-historia-imgDiv img{
+    max-width: 40rem;
+}
+
+.nosotros-historia-info-title {
+    font-size: 2.5rem;
+    position: relative;
+    margin-top: 0;
+}
+.nosotros-equipo {
+    background-color: var(--fondo1);
+    display: flex;
+    justify-content: center;
+    padding: 5rem 1rem;
+    color: var(--text2);
+    gap: 3rem;
+}
+.nosotros-equipo-info {
+    max-width: 40rem;
+}
+.nosotros-equipo-imgDiv img {
+    max-width: 40rem;
+}
+.nosotros-equipo-info-title {
+    font-size: 2.5rem;
+    position: relative;
+    margin-top: 0;
+}
+.nosotros-equipo-info-title::after, .nosotros-historia-info-title::after {
+    position: absolute;
+    content: "";
+    bottom: 4px;
+    background-color: var(--principal);
+    left: 0;
+    height: 2px;
+    width: 7.2rem;
+}
+@media (max-width: 1200px) {
+    .nosotros-historia{
+        flex-direction: column;
+        align-items: center;
+    }
+    .nosotros-historia-info{
+        max-width: 50rem;
+        text-align: center;
+    }
+    .nosotros-historia-info-title{
+        text-align: start;
+    }
+    .nosotros-historia-imgDiv img {
+        max-width: 100%;
+    }
+    .nosotros-equipo{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .nosotros-equipo-info{
+        max-width: 50rem;
+        text-align: center;
+    }
+    .nosotros-equipo-info-title{
+        text-align: start;
+    }
+    .nosotros-equipo-imgDiv img {
+        max-width: 100%;
+    }
+}
+
 
 @media (max-width: 1023px) {
     /*header*/
@@ -489,5 +592,10 @@ footer a{
     .contact-container {
         flex-direction: column;
         align-items: center ;
+    }
+
+    /*Nosotros page*/
+    .nosotros-imgDiv-title{
+        font-size: 4rem;
     }
 }

@@ -98,7 +98,6 @@ document.querySelector(".header-actionMenu-cartButton").addEventListener("click"
 
 
 //MENU RESPONSIVE HEADER
-
 const headerMenuActiveButton = document.querySelector('.headerMenuActiveButton');
 const headerResponsiveMenu = document.querySelector(".header-responsiveMenu");
 const headerResponsiveMenuCloseButton = document.querySelector(".header-responsiveMenu-closeButton");
@@ -111,5 +110,25 @@ headerMenuActiveButton.addEventListener("click", () => {
 //Cerrar Menu
 headerResponsiveMenuCloseButton.addEventListener("click", () => {
     headerResponsiveMenu.style.display = "none";
+})
+
+
+// BARRA DE BUSQUEDA
+const searchBar = document.querySelector(".header-input");
+
+searchBar.addEventListener("keydown", (event)=>{
+    if (event.key=='Enter') {
+        const searchBarValue = searchBar.value;
+        const products = document.querySelectorAll(".product");
+
+        products.forEach(i => {
+            productName = i.children[1].children[0].children[0].textContent;
+            buttonToClick = i.children[1].children[1];
+
+            if(productName == searchBarValue) {
+                buttonToClick.click();
+            }
+        });
+    }
 })
 
