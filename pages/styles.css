@@ -8,12 +8,12 @@
 
 @font-face {
     font-family: DMSans;
-    src: url('assets/fonts/Bebas_Neue_DM_Sans/DM_Sans/DMSans-VariableFont_opszwght.ttf');
+    src: url('../assets/fonts/Bebas_Neue_DM_Sans/DM_Sans/DMSans-VariableFont_opszwght.ttf');
 }
 
 @font-face {
     font-family: Neue;
-    src: url('assets/fonts/Bebas_Neue_DM_Sans/Bebas_Neue/BebasNeue-Regular.ttf');
+    src: url('../assets/fonts/Bebas_Neue_DM_Sans/Bebas_Neue/BebasNeue-Regular.ttf');
 }
 
 body {
@@ -120,7 +120,7 @@ h1 {
 
 /*MAIN*/
 .ads{
-    background-image: url(assets/banner.webp);
+    background-image: url(../assets/banner.webp);
     background-position: center;
     height: 30rem;
     background-repeat: no-repeat;
